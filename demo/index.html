@@ -8,16 +8,25 @@
 	<link rel="stylesheet" type="text/css" href="../src/main.css"/>
 
     <script type="text/javascript" src="x-tag-components.js"></script> 
-    <script type="text/javascript" src="../src/main.js"></script>      
-	<style>
-
-	</style>
+    <script type="text/javascript" src="../src/main.js"></script>
+    <div id="H">Demo<div/>
+    <style>
+    body {
+      font-family: "helvetica";
+      font-weight: 200;
+    }
+    </style>
+    <script>
+    	xtag.addEvent(document.getElementById("H"), "press", function () {
+       alert("onpress!");
+        });
+    </script>
 </head>
 
 <body>
-
-	<h2>Create a Demo</h2>
-
+<div id="H">Demo<div/>
+Pressing the button will result in a dialog to popup, this is much quicker than onclick on a touchscreen
+<div onclick="alert('onclick! *puff**puff**sigh*')">onclick</div>
 
 </body>
 
