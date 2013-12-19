@@ -6,5 +6,5 @@ The press event is designed to replace onclick, onclick has a .3s delay on touch
 ```
 element.addEventListener("press", function () {});
 ```
-# (Demo)[http://jsfiddle.net/samarthwiz/QfFZA/embedded/result/]
+# [Demo](http://jsfiddle.net/samarthwiz/QfFZA/embedded/result)
 
