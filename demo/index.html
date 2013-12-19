@@ -18,16 +18,16 @@
     <script>
       window.onload = function () {
     	xtag.addEvent(document.getElementById("H"), "press", function () {
-         alert("onpress!");
+          alert("Hello, world!");
         });
       };
     </script>
 </head>
 
 <body>
-<div id="H">Demo</div>
+<button id="H">Demo</button>
 Pressing the button will result in a dialog to popup, this is much quicker than onclick on a touchscreen
-<div onclick="alert('onclick! *puff**puff**sigh*')">onclick</div>
+<button onclick="alert('onclick! *puff**puff**sigh*')">onclick</button>
 
 </body>
 
