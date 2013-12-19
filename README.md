@@ -1,24 +1,10 @@
-# About
+# press event
 
-This repo is an X-Tag custom web-component stub that can be used as a starting point when building new elements.  It provides that basic tools and grunt tasks to get started.
+The press event is designed to replace onclick, onclick has a .3s delay on touchdevices, the current solution would be to have two event handlers, one of on click and one for ontap, the future is press, one handler for both
 
-# Dev Setup
-
+# Usage
 ```
-Fork this repo, rename it, then clone it.
-
-$ npm install	// install bower tasks
-$ bower install	// install components
-$ grunt build   // build the dependencies
-
+element.addEventListener("press", function () {});
 ```
-
-# Links
-
-[X-Tags Docs](http://x-tags.org/docs)
-
-[Guide for creating X-Tag Components](https://github.com/x-tag/core/wiki/Creating-X-Tag-Components)
-
-[Using X-Tag components in your applications](https://github.com/x-tag/core/wiki/Using-our-Web-Components-in-Your-Application)
-
+# (Demo)[http://jsfiddle.net/samarthwiz/QfFZA/embedded/result/]
 
