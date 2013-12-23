@@ -12,6 +12,7 @@ xtag.customEvents.press = {
       setTimeout(function () {
        this.activated=false;
         }.bind(event.target.xtag.customevents.press.data), 100);
+      this.activated = true;
       return true;
     }
 }
