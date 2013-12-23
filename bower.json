@@ -7,7 +7,7 @@
     "customevents"
   ],
   "main": [
-    "src/main.js",
+    "src/main.js"
   ],
   "dependencies": {
     "x-tag-core": "*"
