@@ -6,9 +6,9 @@ xtag.customEvents.press = {
     ],
     condition: function (event) {
       if (!event.target.xtag) event.target.xtag = {};
-      if (!event.target.xtag.customevent) event.target.xtag.customevent = {};
-      if (!event.target.xtag.customevent.press) event.target.xtag.customevent.press = {data: {activated: false}};
-      if (event.target.xtag.customevent.press.data.activated) return false;
+      if (!event.target.xtag.customevents) event.target.xtag.customevents = {};
+      if (!event.target.xtag.customevents.press) event.target.xtag.customevents.press = {data: {activated: false}};
+      if (event.target.xtag.customevents.press.data.activated) return false;
       setTimeout(function () {
        this.activated=false;
         }.bind(event.target.xtag.customevents.press.data), 100);
