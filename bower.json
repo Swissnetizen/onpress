@@ -1,14 +1,13 @@
 {
-  "name": "stub",
+  "name": "onpress",
   "description": "",
   "version": "0.1.0",
   "keywords": [
-    "web-components",    
-    "x-tag"
+    "x-tag",
+    "customevents"
   ],
   "main": [
     "src/main.js",
-    "src/main.css"
   ],
   "dependencies": {
     "x-tag-core": "*"

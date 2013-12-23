@@ -1,11 +1,10 @@
 {
-	"name": "stub",
-	"tagName": "x-stub",
+	"name": "onpress",
 	"version": "0.1.0",
-	"author": "you",
+	"author": "Samarth AGARWAL",
 	"description": "",
-	"demo": "demo/index.html",
-	"categories": [],
+	"demo": "http://jsfiddle.net/samarthwiz/QfFZA/embedded/result",
+	"categories": ["customevent"],
 	"compatibility": {
 		"firefox": 5,
 		"chrome": 4,
@@ -15,11 +14,6 @@
 		"ios": 4
 	},
 	"documentation": {
-		"description": "",
-		"attributes": {},
-		"events": {},
-		"methods": {},
-		"getters": {},
-		"setters": {}
+		"description": "A customevent which responds to both mouseup and touchend, intended to replace onclick,\n it does not have the 300ms delay that onclick has on touchscreens."
 	}
 }
