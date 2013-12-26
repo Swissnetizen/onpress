@@ -36,7 +36,7 @@ xtag.customEvents.press = {
         //Cancels event if finger is moved or they stop touching/clicking the the button. Also cancels if touchcancel.
       } else if (type === "touchleave", "mouseleave", "touchmove", "touchcancel") {
         data.canceled = true;
-      } else if (type === "touchend", "mouseup", && !data.canceled) {
+      } else if (type === "touchend", "mouseup" && !data.canceled) {
         //Time between start of press to finish
         var time = Data.now(),
             difference = time - data.starttime;
