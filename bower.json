@@ -1,7 +1,7 @@
 {
   "name": "onpress",
   "description": "An event to replace onclick, does not have .3s delay on touchscreens(which onclick has)",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "keywords": [
     "x-tag",
     "customevents"
