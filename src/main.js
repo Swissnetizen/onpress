@@ -1,8 +1,8 @@
 (function(){
-"use strict";
-xtag.customEvents.press = {
+  "use strict";
+  xtag.customEvents.press = {
     maxHold: 1500,
-    attach: [
+    base: [
       //Touch events
       "touchstart",
       "touchmove",
@@ -14,18 +14,18 @@ xtag.customEvents.press = {
       "mouseleave",
       "mouseup"
     ],
-    condition: function (event) {
+    condition: function (custom, event) {
       var el = event.target, data, type;
       //Creates data object
       if (!el.xtag) el.xtag = {};
       if (!el.xtag.customEvents) el.xtag.customEvents = {};
       if (!el.xtag.customEvents.press) el.xtag.customEvents.press = {data: {activated: false}};
       if (el.xtag.customEvents.press.data.activated) return false;
-      //Assigns variables to data objects
+      //Assigns variables to data 
       data = el.xtag.customEvents.press.data;
       type = event.type;
       //Start event
-      if (type === "touchstart", "mousedown") {
+      if (["touchstart", "mousedown"].indexOf(type) !== -1) {
         //Be a bit stupid to do this when not neccessary
         if (data.activated) return false;
          //Time is used to determine wheather or not the finget had been held too long
@@ -34,11 +34,11 @@ xtag.customEvents.press = {
         //Potentially used in the future
          data.starttype = type === "touchstart" ? "touch" : "mouse";
         //Cancels event if finger is moved or they stop touching/clicking the the button. Also cancels if touchcancel.
-      } else if (type === "touchleave", "mouseleave", "touchmove", "touchcancel") {
+      } else if (["touchleave", "mouseleave", "touchmove", "touchcancel"].indexOf(type) !== -1) {
         data.canceled = true;
-      } else if (type === "touchend", "mouseup" && !data.canceled) {
+      } else if ([type === "touchend", "mouseup"].indexOf(type) !== -1 && !data.canceled) {
         //Time between start of press to finish
-        var time = Data.now(),
+        var time = Date.now(),
             difference = time - data.starttime;
         if (difference < 0) {
           console.warn("The system's internal clock is most likely damaged or incorrectly set!");
@@ -56,5 +56,5 @@ xtag.customEvents.press = {
       }
       return false;
     }
-}
+  };
 })();
