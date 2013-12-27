@@ -6,5 +6,5 @@ An event to replace onclick, does not have .3s delay on touchscreens(which oncli
 ```
 element.addEventListener("press", function () {});
 ```
-# [Demo](http://jsfiddle.net/samarthwiz/QfFZA/embedded/result)
+# [Demo](http://samarthwiz.github.io/onpress/demo/)
 
