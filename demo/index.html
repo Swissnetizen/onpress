@@ -3,10 +3,8 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Stub Demo - X-Tag</title>
+    <title>Press event demo</title>
     <link rel="stylesheet" type="text/css" href="x-tag-components.css"/>
-	<link rel="stylesheet" type="text/css" href="../src/main.css"/>
-
     <script type="text/javascript" src="x-tag-components.js"></script> 
     <script type="text/javascript" src="../src/main.js"></script>
     <style>
@@ -16,18 +14,21 @@
     }
     </style>
     <script>
-      window.onload = function () {
+      window.addEventListener("DOMComponentsLoaded", function () {
     	xtag.addEvent(document.getElementById("H"), "press", function () {
           alert("Hello, world!");
         });
-      };
+        xtag.addEvent(document.getElementById("h"), "click", function () {
+          alert('onclick! *puff**puff**sigh*');
+        });
+      });
     </script>
 </head>
 
 <body>
 <button id="H">Demo</button>
-Pressing the button will result in a dialog to popup, this is much quicker than onclick on a touchscreen
-<button onclick="alert('onclick! *puff**puff**sigh*')">onclick</button>
+Pressing the button will result in a dialog to popup, <br />this is much quicker than onclick on ios.
+<button id="h">onclick</button>
 
 </body>
 
