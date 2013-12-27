@@ -15,15 +15,15 @@ xtag.customEvents.press = {
       "mouseup"
     ],
     condition: function (event) {
+      var el = event.target, data, type;
       //Creates data object
-      var el = event.target,
-          data;
       if (!el.xtag) el.xtag = {};
       if (!el.xtag.customEvents) el.xtag.customEvents = {};
       if (!el.xtag.customEvents.press) el.xtag.customEvents.press = {data: {activated: false}};
       if (el.xtag.customEvents.press.data.activated) return false;
-      data = el.xtag.customEvents.press.data,
-        type = event.type;
+      //Assigns variables to data objects
+      data = el.xtag.customEvents.press.data;
+      type = event.type;
       //Start event
       if (type === "touchstart", "mousedown") {
         //Be a bit stupid to do this when not neccessary
