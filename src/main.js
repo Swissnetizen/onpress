@@ -36,7 +36,7 @@
         //Cancels event if finger is moved or they stop touching/clicking the the button. Also cancels if touchcancel.
       } else if (["touchleave", "mouseleave", "touchmove", "touchcancel"].indexOf(type) !== -1) {
         data.canceled = true;
-      } else if ([type === "touchend", "mouseup"].indexOf(type) !== -1 && !data.canceled) {
+      } else if (["touchend", "mouseup"].indexOf(type) !== -1 && !data.canceled) {
         //Time between start of press to finish
         var time = Date.now(),
             difference = time - data.starttime;
