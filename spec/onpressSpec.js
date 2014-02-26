@@ -1,5 +1,5 @@
 (function () {
-  describe(function ("onpress") {
+  describe("onpress", function () {
     var el;
     beforeEach(function () {
       el = document.createElement("button");
